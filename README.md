@@ -1,1 +1,1 @@
-# skripta-readme-prava
+# skripta

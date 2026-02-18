@@ -1,0 +1,578 @@
+<!DOCTYPE html> 
+<html lang="hr" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Čitak - Web Dizajn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark text-white">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-info" style="position: fixed;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-info" href="#">+
+        <span class="badge bg-warning text-dark me-2">DČ</span>
+        Dino Čitak
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link text-white" href="#lekcija1">CSS u HTML</a>
+          <a class="nav-link text-white" href="#lekcija2">Opacity i Gradient</a>
+          <a class="nav-link text-white" href="#lekcija3">CSS Positioning</a>
+          <a class="nav-link text-white" href="#lekcija4">Sjene i zaobljeni rubovi</a>
+          <a class="nav-link text-white" href="#lekcija5">Flexbox</a>
+          <a class="nav-link text-white" href="#lekcija6">Dimenzije u CSS</a>
+          <a class="nav-link text-white" href="#lekcija7">CSS Grid</a>
+          <a class="nav-link text-white" href="#lekcija8">HTML FORME</a>
+          <a class="nav-link text-white" href="#lekcija9">CSS Pseudo Klase</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container-fluid bg-dark py-5 mb-4">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-white mb-3 text-center">
+        <span class="text-info">Web Projekti</span> 2.E
+      </h1>
+    </div>
+  </div>
+
+  <div class="container py-4 text-start">
+    <!-- LEKCIJA 1 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija1">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">1</span>
+        Lekcija 1: Kako dodati CSS u HTML
+      </h1>
+      <p>Postoje tri načina kako možemo dodati CSS u HTML dokument:</p>
+      <ul class="text-start ps-4">
+        <li><b class="text-info">Inline CSS</b> – stil pišemo direktno u HTML element</li>
+        <li><b class="text-info">Internal CSS</b> – stil pišemo unutar &lt;style&gt; taga u &lt;head&gt;</li>
+        <li><b class="text-info">External CSS</b> – stil pišemo u posebnu .css datoteku</li>
+      </ul>
+      <h2 class="text-info mt-4">Primjeri:</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">
+          &lt;!-- Inline CSS --&gt;<br>
+          &lt;p style="color:red;"&gt;Ovo je crveni tekst&lt;/p&gt;<br><br>
+          &lt;!-- Internal CSS --&gt;<br>
+          &lt;style&gt;<br>
+          &nbsp;&nbsp;p { color: blue; }<br>
+          &lt;/style&gt;<br><br>
+          &lt;!-- External CSS --&gt;<br>
+          &lt;link rel="stylesheet" href="style.css"&gt;
+        </code>
+      </div>
+      <div class="alert alert-secondary border-info">
+        <b class="text-info">Važno:</b> Najbolja praksa je koristiti <span class="text-info">external CSS</span> jer razdvaja sadržaj i dizajn.
+      </div>
+    </section>
+
+    <!-- LEKCIJA 2 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija2">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">2</span>
+        Lekcija 2: Opacity i Gradient
+      </h1>
+      <p>U CSS-u možemo mijenjati <b>prozirnost elemenata</b> pomoću <span class="badge bg-info text-dark">opacity</span> i stvarati prelaze boja pomoću <span class="badge bg-info text-dark">gradient</span>.</p>
+      
+      <h2 class="text-info mt-4">1. Opacity (prozirnost)</h2>
+      <p>Opacity određuje koliko je element proziran. Vrijednosti idu od <b>0</b> (potpuno prozirno) do <b>1</b> (potpuno neprozirno).</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">
+          &lt;!-- Primjer opacity --&gt;<br>
+          &lt;div style="background-color:blue; color:white; padding:20px; opacity:0.5;"&gt;<br>
+          &nbsp;&nbsp;Ovo je poluprozirni plavi okvir<br>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <h2 class="text-info mt-4">2. Gradient (prijelaz boja)</h2>
+      <p>Gradient omogućuje da se boje postepeno mijenjaju, umjesto jednobojnog elementa. Najčešće se koristi <b>linear-gradient</b>.</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">
+          &lt;!-- Primjer linearnog gradienta --&gt;<br>
+          &lt;div style="background: linear-gradient(to right, red, yellow); color:black; padding:20px;"&gt;<br>
+          &nbsp;&nbsp;Ovo je div s prelaskom boja od crvene do žute<br>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <h2 class="text-info mt-4">Primjer: Kombiniranje Gradienta i Opacity</h2>
+      <p>U ovom primjeru koristimo linearni gradient i opacity zajedno:</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">
+          &lt;div style="background: linear-gradient(to right, purple, pink); padding:20px; color:white; opacity:0.7;"&gt;<br>
+          &nbsp;&nbsp;Ovaj okvir ima gradient i djelomičnu prozirnost&lt;/div&gt;
+        </code>
+      </div>
+      <div class="bg-primary bg-gradient rounded p-4 my-3 text-start">
+        <p class="mb-0 text-white">Ovaj okvir ima gradient i djelomičnu prozirnost</p>
+      </div>
+      <div class="alert alert-secondary border-info">
+        ✅ <b>Napomena:</b> <b>opacity</b> utječe i na tekst unutar elementa, dok <b>background-color</b> ili <b>background-image</b> može biti proziran bez da tekst postane proziran koristeći <code class="text-info">rgba()</code>.
+      </div>
+    </section>
+
+    <!-- LEKCIJA 3 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija3">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">3</span>
+        Lekcija 3 - CSS Positioning
+      </h1>
+      <h2 class="text-info">CSS Positioning – Najvažnije stvari</h2>
+      <h3 class="mt-4"><b class="text-info">1. Što je positioning?</b></h3>
+      <p>Positioning u CSS-u određuje na koji način se element postavlja unutar web stranice. Postoji 5 osnovnih tipova positioninga.</p>
+      
+      <h2 class="text-info mt-4">Vrste positioninga</h2>
+      <ul class="text-start ps-4">
+        <li><code class="text-info">static</code></li>
+        <li><code class="text-info">relative</code></li>
+        <li><code class="text-info">absolute</code></li>
+        <li><code class="text-info">fixed</code></li>
+        <li><code class="text-info">sticky</code></li>
+      </ul>
+
+      <h2 class="text-info mt-4">Z-Index</h2>
+      <ul class="text-start ps-4">
+        <li>Određuje <b>redoslijed slojeva elemenata</b> (tko je "ispred", tko "iza").</li>
+        <li>Samo elementi s position vrijednošću različitom od <b>static</b> <b>koriste z-index</b>.</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Primjer: Z-indexa</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;style&gt;
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3; &lt;!-- gray box will be above both green and black box --&gt;
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2; &lt;!-- green box will be above black box --&gt;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+&lt;/style&gt;
+
+&lt;div class="container"&gt;
+  &lt;div class="black-box"&gt;Black box (z-index: 1)&lt;/div&gt;
+  &lt;div class="gray-box"&gt;Gray box (z-index: 3)&lt;/div&gt;
+  &lt;div class="green-box"&gt;Green box (z-index: 2)&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <div class="position-relative bg-secondary rounded p-4 my-3" style="min-height: 200px;">
+        <div class="position-relative bg-dark border border-white rounded p-2 mb-2" style="z-index: 1; height: 100px;">Black box (z-index: 1)</div>
+        <div class="position-absolute bg-secondary border border-white rounded p-2" style="z-index: 3; height: 60px; width: 70%; left: 50px; top: 50px;">Gray box (z-index: 3)</div>
+        <div class="position-absolute bg-success border border-white rounded p-2" style="z-index: 2; width: 35%; left: 270px; top: -15px; height: 100px;">Green box (z-index: 2)</div>
+      </div>
+    </section>
+
+    <!-- LEKCIJA 4 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija4">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">4</span>
+        Lekcija 4: Sjene i zaobljeni rubovi
+      </h1>
+      <h2 class="text-info">CSS Box Shadow – Sjene elemenata</h2>
+      <p>Svojstvo box-shadow u CSS-u koristi se za dodavanje sjene iza elemenata (npr. okvira, slika, gumbova, kutija…). Omogućuje da elementi izgledaju istaknutije i modernije.</p>
+      
+      <h2 class="text-info mt-4">Osnovni kod:</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">box-shadow: horizontal vertical blur spread color;</code>
+      </div>
+
+      <h2 class="text-info mt-4">Značenje</h2>
+      <ul class="text-start ps-4">
+        <li><b class="text-info">horizontal</b> – koliko sjena ide udesno (npr. 5px)</li>
+        <li><b class="text-info">vertical</b> – koliko ide prema dolje (npr. 5px)</li>
+        <li><b class="text-info">blur</b> – koliko je sjena zamućena (npr. 10px)</li>
+        <li><b class="text-info">spread</b> – koliko je velika sjena (opcionalno)</li>
+        <li><b class="text-info">color</b> – boja sjene (npr. gray ili rgba(0,0,0,0.3))</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Primjer (css)</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>div {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+}</code></pre>
+      </div>
+      <p>Ovaj kod stvara sivu sjenu 5px desno i 5px dolje, s blagim zamućenjem</p>
+
+      <h2 class="text-info mt-4">Primjer unutarnje sjene-inset (css)</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>div {
+  box-shadow: inset 3px 3px 5px gray;
+}</code></pre>
+      </div>
+
+      <h2 class="text-info mt-4">Prozirne sjene (css)</h2>
+      <p>Pomoću <b>RGBA</b> boja možeš dobiti nježnije sjene:</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>div {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}</code></pre>
+      </div>
+
+      <h2 class="text-info mt-4">Primjena na slike i gumbove (css)</h2>
+      <p>Sjenu možeš koristiti da slike ili gumbi izgledaju profesionalnije.</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>img {
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+
+button {
+  box-shadow: 2px 2px 6px gray;
+}</code></pre>
+      </div>
+
+      <h2 class="text-info mt-4">Primjer upotrebe svojstva box-shadow i zakrivljenih rubova:</h2>
+      <div class="bg-secondary rounded p-4 my-4 text-start">
+        <p class="mb-0 fw-bold">Ovdje se vidi sjena!</p>
+      </div>
+
+      <h2 class="text-info mt-4">Zaobljeni rubovi</h2>
+      <p>Svojstvo <b>border-radius</b> omogućava zaobljene kutove elemenata poput div-ova, slika, gumbova…</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>selector {
+  border-radius: vrijednost;
+}</code></pre>
+      </div>
+
+      <p><b class="text-info">Vrijednosti mogu bit:</b></p>
+      <ul class="text-start ps-4">
+        <li>px (pikseli) npr. 10px</li>
+        <li>% npr. 50% → za krug</li>
+        <li>više vrijednosti → različiti kutovi različito zaobljeni</li>
+      </ul>
+    </section>
+
+    <!-- LEKCIJA 5 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija5">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">5</span>
+        Lekcija 5: Flexbox
+      </h1>
+      <h2 class="text-info">Što je Flexbox</h2>
+      <p>Flexbox (Flexible Box Layout) je CSS način rasporeda elemenata koji omogućava lako poravnanje i prilagodbu unutar kontejnera. Koristi se za izradu fleksibilnih i responzivnih rasporeda bez floatova ili pozicioniranja.</p>
+      
+      <h2 class="text-info mt-4">Kada koristiti Flexbox</h2>
+      <p>Koristi se kada želiš:</p>
+      <ul class="text-start ps-4">
+        <li>Lako centrirati elemente</li>
+        <li>Jednako rasporediti prostor</li>
+        <li>Mijenjati redoslijed elemenata</li>
+        <li>Napraviti responzivan dizajn (npr. meni, galeriju, raspored blokova)</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Osnovni pojmovi</h2>
+      <ul class="text-start ps-4">
+        <li><b class="text-info">Flex container</b> – element koji sadrži flex iteme (display: flex)</li>
+        <li><b class="text-info">Flex items</b> – elementi unutar kontejnera</li>
+        <li><b class="text-info">Glavna os (main axis)</b> i <b class="text-info">poprečna os (cross axis)</b></li>
+        <li><b class="text-info">Flex direction</b> – smjer rasporeda elemenata</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Postavljanje flexboxa</h2>
+      <ul class="text-start ps-4">
+        <li><code class="text-info">display: flex</code> – blokovni flex container</li>
+        <li><code class="text-info">display: inline-flex</code> – inline flex container</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Glavne osobine containera</h2>
+      <ul class="text-start ps-4">
+        <li><code class="text-info">flex-direction</code> – redoslijed (row, column, row-reverse, column-reverse)</li>
+        <li><code class="text-info">flex-wrap</code> – lomljenje elemenata (nowrap, wrap, wrap-reverse)</li>
+        <li><code class="text-info">justify-content</code> – raspored duž glavne osi</li>
+        <li><code class="text-info">align-items</code> – poravnanje po poprečnoj osi</li>
+        <li><code class="text-info">align-content</code> – razmak između redova</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Flex box primjer</h2>
+      <p>Fleksibilni raspored mora imati roditeljski element kojem je svojstvo <em>display</em> postavljeno na <em>flex</em>.</p>
+      <p>Direktni elementi unutar fleksibilnog kontejnera automatski postaju fleksibilni elementi.</p>
+      <div class="d-flex bg-primary rounded p-3 my-3">
+        <div class="bg-light text-dark rounded p-3 m-2 fw-bold">1</div>
+        <div class="bg-light text-dark rounded p-3 m-2 fw-bold">2</div>
+        <div class="bg-light text-dark rounded p-3 m-2 fw-bold">3</div>
+      </div>
+
+      <h2 class="text-info mt-4">Flex items primjer</h2>
+      <p>U primjeru ispod, svaki element unutar kontejnera ima različitu veličinu jer koristi svojstvo <em>flex</em>.</p>
+      <div class="d-flex bg-primary rounded p-3 my-3">
+        <div class="bg-light text-dark rounded p-3 m-2 fw-bold flex-fill">1</div>
+        <div class="bg-light text-dark rounded p-3 m-2 fw-bold flex-fill">2</div>
+        <div class="bg-light text-dark rounded p-3 m-2 fw-bold flex-fill">3</div>
+      </div>
+    </section>
+
+    <!-- LEKCIJA 6 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija6">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">6</span>
+        Lekcija 6: Dimenzije u CSS
+      </h1>
+      <p><b>Imamo dvije vrste dimenzija, a to su:</b></p>
+      <ul class="text-start ps-4">
+        <li><b class="text-info">Absolutne</b></li>
+        <li><b class="text-info">Relativne</b></li>
+      </ul>
+
+      <h2 class="text-info mt-4">Absolutne dimenzije</h2>
+      <p>Glavna mjerna jedinica za absolutne dimenzije je <span class="badge bg-info text-dark">PIXEL (px)</span></p>
+      <p>Također imamo mjerne jedinice kao što su: cm, mm...</p>
+
+      <h2 class="text-info mt-4">Relativne dimenzije</h2>
+      <p>Relativne dimenzije zavise od drugih elemenata ili postavki preglednika i omogućuju fleksibilan i responzivan dizajn. Najčešće jedinice:</p>
+      <ul class="text-start ps-4">
+        <li><code class="text-info">%</code> – postotak veličine roditeljskog elementa (npr. width: 50%;)</li>
+        <li><code class="text-info">em</code> – relativno u odnosu na veličinu fonta trenutnog elementa (npr. font-size: 2em;)</li>
+        <li><code class="text-info">rem</code> – relativno u odnosu na veličinu fonta root elementa (html)</li>
+        <li><code class="text-info">vw i vh</code> – postotak širine i visine viewporta (npr. width: 50vw;)</li>
+      </ul>
+    </section>
+
+    <!-- LEKCIJA 7 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija7">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">7</span>
+        Lekcija 7: CSS Grid
+      </h1>
+      <p><b class="text-info">Što je CSS Grid:</b> CSS Grid je moćan dvodimenzionalni sistem za raspoređivanje elemenata na web stranici. Omogućuje jednostavno postavljanje elemenata u <b>redove</b> i <b>kolone</b>.</p>
+
+      <h2 class="text-info mt-4">Osnovni pojmovi:</h2>
+      <ul class="text-start ps-4">
+        <li><b class="text-info">Grid container</b> – element kojem je svojstvo <code>display: grid;</code></li>
+        <li><b class="text-info">Grid items</b> – elementi unutar grid containera</li>
+        <li><b class="text-info">Grid lines</b> – linije koje dijele kolone i redove</li>
+        <li><b class="text-info">Grid cells</b> – prostor između dviju susjednih linija</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Kreiranje grid kontejnera</h2>
+      <p>Primjer jednostavnog grida s 3 kolone i 2 reda:</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">
+          &lt;div class="grid-container"&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Item 2&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Item 4&lt;/div&gt;<br>
+          &lt;/div&gt;
+        </code>
+      </div>
+
+      <p>CSS za gornji grid:</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px; /* 3 kolone po 200px */
+  grid-template-rows: 100px 100px; /* 2 reda po 100px */
+  gap: 10px; /* razmak između ćelija */
+}</code></pre>
+      </div>
+
+      <h2 class="text-info mt-4">Kratki zapis i responsive grid</h2>
+      <p>Umjesto da ručno pišeš sve kolone, možeš koristiti <code class="text-info">repeat()</code> i <code class="text-info">fr</code> jedinicu:</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">
+          grid-template-columns: repeat(3, 1fr); /* 3 kolone iste širine */<br>
+          grid-template-rows: auto; /* visina redova automatska */
+        </code>
+      </div>
+
+      <p>Za responzivni dizajn:</p>
+      <div class="bg-secondary rounded p-3 my-3">
+        <code class="text-white">grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));</code>
+      </div>
+
+      <h2 class="text-info mt-4">Postavljanje elemenata unutar grida</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>.item1 {
+  grid-column: 1 / 3; /* zauzima kolone 1 i 2 */
+  grid-row: 1 / 2;    /* zauzima red 1 */
+}</code></pre>
+      </div>
+
+      <h2 class="text-info mt-4">Poravnavanje unutar grida</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>.grid-container {
+  justify-items: center; /* horizontalno poravnanje elemenata */
+  align-items: center;   /* vertikalno poravnanje elemenata */
+}</code></pre>
+      </div>
+
+      <div class="alert alert-secondary border-info">
+        ✅ <b>Napomena:</b> CSS Grid je odličan za kompleksne rasporede koji zahtijevaju kontrolu i redova i kolona. Flexbox se bolje koristi za rasporede u jednom smjeru (red ili kolona).
+      </div>
+    </section>
+
+    <!-- LEKCIJA 8 -->
+    <section class="mb-5 pb-4 border-bottom border-info text-start" id="lekcija8">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">8</span>
+        Lekcija 8: HTML FORME
+      </h1>
+      <p>HTML forme služe za unos podataka od strane korisnika i najčešće se koriste za:</p>
+      <ul class="text-start ps-4">
+        <li>kontakt obrasce</li>
+        <li>prijavu / registraciju</li>
+        <li>pretragu</li>
+        <li>slanje poruka</li>
+      </ul>
+
+      <p class="mt-3">Forma se definira pomoću <b class="text-info">form</b> elementa.</p>
+
+      <h3 class="text-info mt-4">Osnovna struktura forme</h3>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;form&gt;
+    &lt;!-- elementi forme --&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+
+      <h3 class="text-info mt-4">Tekstualno polje (input type="text")</h3>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;label for="ime"&gt;Ime:&lt;/label&gt;
+&lt;input type="text" id="ime" name="ime"&gt;</code></pre>
+      </div>
+
+      <h3 class="text-info mt-4">Lozinka (password)</h3>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;label for="lozinka"&gt;Lozinka:&lt;/label&gt;
+&lt;input type="password" id="lozinka" name="lozinka"&gt;</code></pre>
+      </div>
+
+      <h3 class="text-info mt-4">Radio button</h3>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;p&gt;Spol:&lt;/p&gt;
+&lt;input type="radio" id="musko" name="spol" value="musko"&gt;
+&lt;label for="musko"&gt;Muško&lt;/label&gt;
+
+&lt;input type="radio" id="zensko" name="spol" value="zensko"&gt;
+&lt;label for="zensko"&gt;Žensko&lt;/label&gt;</code></pre>
+      </div>
+
+      <h3 class="text-info mt-4">Padajući izbornik</h3>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;label for="grad"&gt;Grad:&lt;/label&gt;
+&lt;select id="grad" name="grad"&gt;
+    &lt;option value="sarajevo"&gt;Sarajevo&lt;/option&gt;
+    &lt;option value="mostar"&gt;Mostar&lt;/option&gt;
+    &lt;option value="tuzla"&gt;Tuzla&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      </div>
+
+      <h3 class="text-info mt-4">Primjer kompletne forme</h3>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>&lt;form action="#" method="post"&gt;
+    &lt;label&gt;Ime:&lt;/label&gt;
+    &lt;input type="text" name="ime"&gt;
+
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+
+    &lt;label&gt;Poruka:&lt;/label&gt;
+    &lt;textarea name="poruka"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Pošalji&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- LEKCIJA 9 -->
+    <section class="mb-5 pb-4 text-start" id="lekcija9">
+      <h1 class="text-info mb-4">
+        <span class="badge bg-warning text-dark me-2">9</span>
+        Lekcija 9: CSS Pseudo Klase
+      </h1>
+      <p>CSS pseudoklasa je ključna riječ koja se može dodati selektoru kako bi se definirao stil za posebno stanje elementa.</p>
+
+      <p>Neke uobičajene upotrebe pseudo-klasa:</p>
+      <ul class="text-start ps-4">
+        <li>Stiliziranje elementa kada korisnik pomakne miš preko njega</li>
+        <li>Stilizirajte posjećene i neposjećene poveznice drugačije</li>
+        <li>Stiliziranje elementa kada dobije fokus</li>
+        <li>Stil važećih/nevažećih/obaveznih/neobaveznih elemenata obrasca</li>
+        <li>Stilizirajte element koji je prvo dijete svog roditelja</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Sintaksa</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>selector:pseudo-class-name {
+  CSS properties
+}</code></pre>
+      </div>
+
+      <h2 class="text-info mt-4">Pseudoklase korištene na poveznicama</h2>
+      <ul class="text-start ps-4">
+        <li><code class="text-info">:link</code> - Stilovi neposjećenih poveznica</li>
+        <li><code class="text-info">:visited</code> - Stilovi posjećenih poveznica</li>
+        <li><code class="text-info">:hover</code> - Stilizuje poveznicu prilikom prelaska mišem preko nje</li>
+        <li><code class="text-info">:active</code> - Stilizuje aktiviranu poveznicu</li>
+      </ul>
+
+      <h2 class="text-info mt-4">Primjer</h2>
+      <div class="bg-secondary rounded p-3 my-3">
+        <pre class="text-white mb-0"><code>/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}</code></pre>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark border-top border-info py-4 mt-5">
+    <div class="container text-white-50 text-start">
+      <p class="mb-0">© 2026 Dino Čitak - Web Projekti 2.E</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
